@@ -36,3 +36,154 @@
     transform: rotate(360deg);
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  background: linear-gradient(to bottom, #68eacc 0%, #497be8 100%);
+}
+.wrapper {
+  background: #fff;
+  max-width: 400px;
+  width: 100%;
+  margin: 120px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+}
+.wrapper header {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.wrapper .inputField {
+  margin: 20px auto;
+  display: flex;
+  width: 100%;
+  height: 40px;
+}
+.inputField input {
+  width: 85%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+}
+.inputField button {
+  width: 50px;
+  height: 100%;
+  border: none;
+  color: #fff;
+  background-color: #8e49e8;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 5px;
+  /* opacity: 0.6;
+  pointer-events: none; */
+}
+.inputField button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.todoList li {
+  list-style: none;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: default;
+  right: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.todoList li .icon {
+  position: absolute;
+  right: -45px;
+  top: 0;
+  width: 45px;
+  text-align: center;
+  padding: 10px 15px;
+  background-color: #e74c3c;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.todoList li:hover .icon {
+  right: 0;
+}
+.wrapper .footer {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.footer button {
+  width: 80px;
+  height: 100%;
+  border: none;
+  color: #fff;
+  background-color: #8e49e8;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 5px;
+  padding: 6px 10px;
+}
+
+.color{
+  color: #000;
+  margin: auto;
+  margin-top: 20px;
+}
+.flex{
+  display: flex;
+  background-color:green;
+}
+label{
+  margin-left: 100px;
+}
+.cach{
+  margin-left: 100px;
+}
+.top{
+  margin-top: 100px;
+}
+.size{
+  width: 100px;
+  height: auto;
+}
+.background{
+  background-color: aquamarine;
+}
+.margin{
+  max-width: 400px;
+  max-height: auto;
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+  border-radius: 4px;
+  line-height: 40px;
+}
+.input{
+  width: 400px;
+  height: 40px;
+  border-radius: none;
+}
+.font{
+  font-size: 40px;
+}
+.buttom{
+  border: 1px solid #8e49e8;
+  max-width: 80px;
+  background-color: #e74c3c;
+  margin: auto;
+  cursor: pointer;
+}
