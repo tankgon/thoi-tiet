@@ -13,6 +13,7 @@ function App() {
   const [listrender, setlistrender] = useState([]);
   const [Getname, setGetname] = useState("");
   const url = `${api.base}weather?q=${Getname}&units=metric&APPID=${api.key}`
+
   const typingTimeoutRef = useRef(null);
 
 // ComponentDidMount
@@ -29,12 +30,12 @@ function App() {
   }
   
   const onChageName = (e) => {
-    setGetname(e.target.value)
     if(typingTimeoutRef.current){
       clearTimeout(typingTimeoutRef.current)
     }
     else{
       typingTimeoutRef.current = setTimeout(()=>{
+        setGetname(e.target.value)
         const formValue = {
           Getname: e.target.value,
         };
@@ -52,7 +53,7 @@ function App() {
       alert("cold")
     }
   }
-  console.log(listrender?.rain);
+  console.log(Getname);
   
 
   return (
@@ -66,7 +67,7 @@ function App() {
         <div className='font'>Nhiệt độ là: { listrender?.main?.temp}<sup>0</sup>C</div>
         <div className='font'>Tên thành phố {listrender?.name}</div>
         <div className='font'>Tên quốc gia: {listrender?.sys?.country}</div>
-        {listrender?.rain ? <div>co mua lúc</div> :<div>khong co mua</div>}
+        {listrender?.rain ? <div>co mua</div> :<div>khong co mua</div>}
 
     </div>
   );
